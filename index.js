@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000
 
 app.get('/', (req, res) => {
     res.send(
-        '<h1> WOOOHOO </h1>'
+        `<h1> WOOOHOO I ${process.env.SECRET} myself!</h1>`
     )
 })
 
@@ -14,9 +14,12 @@ app.get('/port', (req, res)=> {
     res.send(`<div> port is ${process.env.PORT}</div>`)
 })
 
+
+
 app.listen(PORT, ()=> {
     console.log(`listening on ${PORT}`)
 })
+
 
 function nameRocks() {
     
